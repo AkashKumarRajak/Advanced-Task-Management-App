@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    transition: text-shadow 0.3s ease;
+    /* Smooth transition for shadow effect */
+}
+
+h1:hover {
+    text-shadow: 0 0 15px rgba(170, 158, 154, 0.5);
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-creation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 1rem;
+}
+
+#taskInput {
+    width: 100%;
+    max-width: 500px;
+    height: 3rem;
+    /* Increased height for better readability */
+    padding: 0.75rem;
+    border: 1px solid #555;
+    background-color: #222;
+    color: #f1f1f1;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1rem;
+    /* Increased font size for better readability */
+    resize: vertical;
+    /* Allow vertical resizing */
+}
+
+#taskInput:focus {
+    border-color: #666;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 87, 34, 0.5);
+    /* Adding shadow on focus */
+    animation: inputFocusAnimation 0.5s ease-in-out;
+}
+
+@keyframes inputFocusAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#addTaskBtn {
+    padding: 0.75rem 1.5rem;
+    background-color: #555;
+    border: none;
+    color: #f1f1f1;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#addTaskBtn:hover {
+    background-color: #666;
+    transform: scale(1.05);
+}
+
+.task-filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.task-filters button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: #444;
+    color: #f1f1f1;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.task-filters button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.task-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+.task-item {
+    background-color: #222;
+    border: 1px solid #333;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.task-item:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.task-details {
+    flex: 1;
+    transition: transform 0.3s ease;
+}
+
+.task-details:hover {
+    transform: scale(1.05);
+}
+
+.task-priority {
+    margin-left: 1rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.high-priority {
+    background-color: #f44336;
+}
+
+.medium-priority {
+    background-color: #ff9800;
+}
+
+.low-priority {
+    background-color: #4caf50;
+}
+
+.task-priority:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #1e1e1e;
+    color: #aaa;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer:hover {
+    background-color: #333;
+    color: #fff;
+}
