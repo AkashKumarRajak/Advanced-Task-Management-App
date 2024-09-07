@@ -18,7 +18,7 @@ A web-based task management application designed to help users efficiently creat
 <br>
 7. Persistent Storage: Save tasks using local storage to retain data across page reloads.
 <br>
-<h2>How to Play</h2>
+<h2>How to Use</h2>
 <br>
 1. Add a Task: Enter the task description in the input field and click the "Add Task" button.
 <br>
